@@ -20,16 +20,32 @@ compile ''
 </activity>
 ```
 
-* Using Activity
+There is two way to implement EdgeSwipe.
+
+1. Using ESAppCompatActivity
 ```java
- slideshowImageView.setImages(R.drawable.test1, R.drawable.test2, R.drawable.test3);
+public class SampleActivity extends ESAppCompatActivity {
+    ...
+}
 ```
 
-there is two way to implement EdgeSwipe.
-
-1 For adding images
+2. Using EdgeSwipeDelegate
 ```java
-slideshowImageView.addImages(R.drawable.test3, R.drawable.test4, R.drawable.test5);
+public class SampleActivity2 extends AppCompatActivity {
+    private EdgeSwipeDelegate edgeSwipeDelegate = new EdgeSwipeDelegate();
+    ...
+    
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if(edgeSwipeDelegate.delegate(this, ev)){
+            return true;
+        } else{
+            return super.dispatchTouchEvent(ev);
+        }
+    }
+    ...
+}
+```
 
 
 # License
