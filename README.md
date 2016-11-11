@@ -3,6 +3,35 @@ Android EdgeSwipe Transition Library
 
 ![SlideshowToolbar Sample Material](https://raw.githubusercontent.com/JuL1205/Android-EdgeSwipe/master/images/essample.gif)
 
+# Usage
+
+For a working implementation of this project see the `app/` folder.
+
+* Include the following dependency in your project `build.gradle` file.
+```groovy
+compile ''
+```
+* Set Transparent Theme
+```java
+<activity
+            android:name=".SampleActivity2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTransparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+```
+
+* For setting images
+```java
+ slideshowImageView.setImages(R.drawable.test1, R.drawable.test2, R.drawable.test3);
+```
+
+* For adding images
+```java
+slideshowImageView.addImages(R.drawable.test3, R.drawable.test4, R.drawable.test5);
 
 
 # License
