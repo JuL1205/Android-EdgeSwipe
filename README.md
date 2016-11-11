@@ -28,6 +28,7 @@ public class SampleActivity extends ESAppCompatActivity {
     ...
 }
 ```
+OR
 
 * Using EdgeSwipeDelegate
 ```java
