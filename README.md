@@ -12,24 +12,22 @@ For a working implementation of this project see the `app/` folder.
 compile ''
 ```
 * Set Transparent Theme
-```java
+```xml
 <activity
-            android:name=".SampleActivity2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppCompatTransparent">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+ ...
+ android:theme="@style/AppCompatTransparent">
+ ...
+</activity>
 ```
 
-* For setting images
+* Using Activity
 ```java
  slideshowImageView.setImages(R.drawable.test1, R.drawable.test2, R.drawable.test3);
 ```
 
-* For adding images
+there is two way to implement EdgeSwipe.
+
+1 For adding images
 ```java
 slideshowImageView.addImages(R.drawable.test3, R.drawable.test4, R.drawable.test5);
 
