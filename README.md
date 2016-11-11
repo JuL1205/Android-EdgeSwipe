@@ -22,14 +22,14 @@ compile ''
 
 There is two way to implement EdgeSwipe.
 
-1. Using ESAppCompatActivity
+* Using ESAppCompatActivity
 ```java
 public class SampleActivity extends ESAppCompatActivity {
     ...
 }
 ```
 
-2. Using EdgeSwipeDelegate
+* Using EdgeSwipeDelegate
 ```java
 public class SampleActivity2 extends AppCompatActivity {
     private EdgeSwipeDelegate edgeSwipeDelegate = new EdgeSwipeDelegate();
