@@ -9,7 +9,7 @@ For a working implementation of this project see the `app/` folder.
 
 * Include the following dependency in your project `build.gradle` file.
 ```groovy
-compile ''
+compile 'com.funtory.jul:edgeswipe:1.0.0'
 ```
 * Set Transparent Theme
 ```xml
