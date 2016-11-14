@@ -9,7 +9,7 @@ For a working implementation of this project see the `app/` folder.
 
 * Include the following dependency in your project `build.gradle` file.
 ```groovy
-compile 'com.funtory.jul:edgeswipe:1.0.0'
+compile 'com.funtory.jul:edgeswipe:1.0.1'
 ```
 * Set Transparent Theme
 ```xml
@@ -34,6 +34,7 @@ OR
 ```java
 public class SampleActivity2 extends AppCompatActivity {
     private EdgeSwipeDelegate edgeSwipeDelegate = new EdgeSwipeDelegate();
+    private ActionMode actionMode;
     ...
     
     @Override
@@ -43,6 +44,30 @@ public class SampleActivity2 extends AppCompatActivity {
         } else{
             return super.dispatchTouchEvent(ev);
         }
+    }
+    
+    @Override
+    public void onActionModeStarted(ActionMode mode) {
+        super.onActionModeStarted(mode);
+        actionMode = mode;
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onPause();
+        endActionMode();
+    }
+    
+    private void endActionMode() {
+        if (actionMode != null) {
+            actionMode.finish(); /** immediately calls {@link #onActionModeFinished(ActionMode)} */
+        }
+    }
+    
+    @Override
+    public void onActionModeFinished(ActionMode mode) {
+        super.onActionModeFinished(mode);
+        actionMode = null;
     }
     ...
 }
