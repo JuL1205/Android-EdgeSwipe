@@ -1,7 +1,52 @@
-# EdgeSwipe Transition
+# Android EdgeSwipe
+Android EdgeSwipe Transition Library
 
+![SlideshowToolbar Sample Material](https://raw.githubusercontent.com/JuL1205/Android-EdgeSwipe/master/images/essample.gif)
 
+# Usage
 
+For a working implementation of this project see the `app/` folder.
+
+* Include the following dependency in your project `build.gradle` file.
+```groovy
+compile 'com.funtory.jul:edgeswipe:1.0.0'
+```
+* Set Transparent Theme
+```xml
+<activity
+ ...
+ android:theme="@style/AppCompatTransparent">
+ ...
+</activity>
+```
+
+There is two way to implement EdgeSwipe.
+
+* Using ESAppCompatActivity
+```java
+public class SampleActivity extends ESAppCompatActivity {
+    ...
+}
+```
+OR
+
+* Using EdgeSwipeDelegate
+```java
+public class SampleActivity2 extends AppCompatActivity {
+    private EdgeSwipeDelegate edgeSwipeDelegate = new EdgeSwipeDelegate();
+    ...
+    
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if(edgeSwipeDelegate.delegate(this, ev)){
+            return true;
+        } else{
+            return super.dispatchTouchEvent(ev);
+        }
+    }
+    ...
+}
+```
 
 
 # License
