@@ -60,7 +60,7 @@ public class SampleActivity2 extends AppCompatActivity {
     
     private void endActionMode() {
         if (actionMode != null) {
-            actionMode.finish(); /** immediately calls {@link #onActionModeFinished(ActionMode)} */
+            actionMode.finish();
         }
     }
     
