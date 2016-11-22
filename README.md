@@ -1,5 +1,5 @@
 # Android EdgeSwipe
-Android EdgeSwipe Transition Library
+Android Edge Swipe Transition Library
 
 ![SlideshowToolbar Sample Material](https://raw.githubusercontent.com/JuL1205/Android-EdgeSwipe/master/images/essample.gif)
 
